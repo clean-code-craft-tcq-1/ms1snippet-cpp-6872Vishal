@@ -1,5 +1,7 @@
 #include "sensor-validate.h"
 
+#define ZERO  ((int)0)
+
 double DeltaValue[Total_Deltas] = {0.1 , 0.05};
 
 bool difference_of_2nd_and_1stValue_greaterthan_3rd(double value, double nextValue, double maxDelta) {
@@ -21,10 +23,10 @@ bool Delta_Deviation_Occured(double* values_provided, int LastIndex, double Delt
 
 bool validateCurrentreadings(double* values, int numOfValues,DeltaTypes Which_Delta_Type) {
 
-  if(numOfValues != 0)
+  if(numOfValues != ZERO)
   {
     int lastButOneIndex = numOfValues - 1;
-      if(Delta_Deviation_Occured(&values[0], lastButOneIndex, DeltaValue[Which_Delta_Type])) {
+      if(Delta_Deviation_Occured(&values[ZERO], lastButOneIndex, DeltaValue[Which_Delta_Type])) {
         return false;
     }
   }
