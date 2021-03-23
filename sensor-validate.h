@@ -1,5 +1,5 @@
 
-bool difference_of_2nd_and_1stValue_greaterthen_3rd(double value, double nextValue, double maxDelta);
+bool difference_of_2nd_and_1stValue_greaterthan_3rd(double value, double nextValue, double maxDelta);
 
 bool validateSOCreadings(double* values, int numOfValues);
 
