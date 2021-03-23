@@ -11,7 +11,7 @@ bool difference_of_2nd_and_1stValue_greaterthan_3rd(double value, double nextVal
 
 bool Delta_Deviation_Occured(double* values_provided, int LastIndex, double Delta_Used)
 {
-  for(int i = 0;numOfValues != 0,i < LastIndex; i++) {
+  for(int i = 0;i < LastIndex; i++) {
     if(difference_of_2nd_and_1stValue_greaterthan_3rd(values_provided[i], values_provided[i + 1], Delta_Used) ) {
       return true;
     }
