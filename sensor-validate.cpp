@@ -18,15 +18,15 @@ bool validateSOCreadings(double* values, int numOfValues) {
   return true;
 }
 
-bool validateCurrentreadings(double* values, int numOfValues) {
-  int lastButOneIndex = numOfValues - 1;
-  for(int i = 0; i < lastButOneIndex; i++) {
-    if(difference_of_2nd_and_1stValue_greaterthan_3rd(values[i], values[i + 1], 0.1)) {
-      return false;
-    }
-  }
-  return true;
-}
+// bool validateCurrentreadings(double* values, int numOfValues) {
+//   int lastButOneIndex = numOfValues - 1;
+//   for(int i = 0; i < lastButOneIndex; i++) {
+//     if(difference_of_2nd_and_1stValue_greaterthan_3rd(values[i], values[i + 1], 0.1)) {
+//       return false;
+//     }
+//   }
+//   return true;
+// }
 
 bool validateCurrentreadings(double* values, int numOfValues,double margin) {
   int lastButOneIndex = numOfValues - 1;
