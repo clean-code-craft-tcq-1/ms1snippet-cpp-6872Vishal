@@ -1,16 +1,17 @@
 #include "sensor-validate.h"
-
-bool _give_me_a_good_name(double value, double nextValue, double maxDelta) {
+//difference_of_NextandCurrentValue_greaterthan_precision
+//difference_of_2nd_and_1stValue_greaterthan_3rd
+bool difference_of_2nd_and_1stValue_greaterthan_3rd(double value, double nextValue, double maxDelta) {
   if(nextValue - value > maxDelta) {
-    return false;
+    return true;
   }
-  return true;
+  return false;
 }
 
 bool validateSOCreadings(double* values, int numOfValues) {
   int lastButOneIndex = numOfValues - 1;
   for(int i = 0; i < lastButOneIndex; i++) {
-    if(!_give_me_a_good_name(values[i], values[i + 1], 0.05)) {
+    if(difference_of_2nd_and_1stValue_greaterthan_3rd(values[i], values[i + 1], 0.05)) {
       return false;
     }
   }
@@ -20,7 +21,17 @@ bool validateSOCreadings(double* values, int numOfValues) {
 bool validateCurrentreadings(double* values, int numOfValues) {
   int lastButOneIndex = numOfValues - 1;
   for(int i = 0; i < lastButOneIndex; i++) {
-    if(!_give_me_a_good_name(values[i], values[i + 1], 0.1)) {
+    if(difference_of_2nd_and_1stValue_greaterthan_3rd(values[i], values[i + 1], 0.1)) {
+      return false;
+    }
+  }
+  return true;
+}
+
+bool validateCurrentreadings(double* values, int numOfValues,double margin) {
+  int lastButOneIndex = numOfValues - 1;
+  for(int i = 0; i < lastButOneIndex; i++) {
+    if(difference_of_2nd_and_1stValue_greaterthan_3rd(values[i], values[i + 1], margin)) {
       return false;
     }
   }
