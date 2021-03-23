@@ -24,7 +24,7 @@ bool validateCurrentreadings(double* values, int numOfValues,DeltaTypes Which_De
   if(numOfValues != 0)
   {
     int lastButOneIndex = numOfValues - 1;
-      if(Delta_Deviation_Occured(values[0], lastButOneIndex, DeltaValue[Which_Delta_Type])) {
+      if(Delta_Deviation_Occured(&values[0], lastButOneIndex, DeltaValue[Which_Delta_Type])) {
         return false;
     }
   }
