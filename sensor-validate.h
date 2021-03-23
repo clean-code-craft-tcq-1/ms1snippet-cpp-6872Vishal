@@ -1,6 +1,6 @@
 
-bool _give_me_a_good_name(double value, double nextValue, double maxDelta);
+bool difference_of_2nd_and_1stValue_greaterthen_3rd(double value, double nextValue, double maxDelta);
 
 bool validateSOCreadings(double* values, int numOfValues);
 
-bool validateCurrentreadings(double* values, int numOfValues);
+bool validateCurrentreadings(double* values, int numOfValues, double margin);
