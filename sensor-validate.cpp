@@ -28,7 +28,7 @@ bool difference_of_2nd_and_1stValue_greaterthan_3rd(double value, double nextVal
 //   return true;
 // }
 
-bool validateCurrentreadings(double* values, int numOfValues,int Which_Delta_Type) {
+bool validateCurrentreadings(double* values, int numOfValues,DeltaTypes Which_Delta_Type) {
   int lastButOneIndex = numOfValues - 1;
   for(int i = 0; i < lastButOneIndex; i++) {
     if(difference_of_2nd_and_1stValue_greaterthan_3rd(values[i], values[i + 1], MaxDelta[Which_Delta_Type])) {
