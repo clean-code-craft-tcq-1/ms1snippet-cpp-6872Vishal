@@ -10,7 +10,7 @@ bool difference_of_2nd_and_1stValue_greaterthan_3rd(double value, double nextVal
 
 bool validateCurrentreadings(double* values, int numOfValues,DeltaTypes Which_Delta_Type) {
   int lastButOneIndex = numOfValues - 1;
-  for(int i = 0; i < lastButOneIndex; i++) {
+  for(int i = 0;values != NULL, i < lastButOneIndex; i++) {
     if(difference_of_2nd_and_1stValue_greaterthan_3rd(values[i], values[i + 1], DeltaValue[Which_Delta_Type])) {
       return false;
     }
