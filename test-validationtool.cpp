@@ -18,6 +18,6 @@ TEST_CASE("reports error when current jumps abruptly") {
 TEST_CASE("Check for NULL pointer") {
   double currentReadings[] = { };
   int numOfCurReadings = sizeof(currentReadings) / sizeof(currentReadings[0]);
-  REQUIRE(validateCurrentreadings(currentReadings, numOfCurReadings, Normal) == false);
+  REQUIRE(validateCurrentreadings(currentReadings, numOfCurReadings, Normal) == true);
 }
 
