@@ -26,6 +26,7 @@ bool validateCurrentreadings(double* values, int numOfValues,DeltaTypes Which_De
   if(numOfValues != ZERO)
   {
     int lastButOneIndex = numOfValues - 1;
+    std::cout<<"LastIndex :"<<lastButOneIndex<<"\n";
       if(Delta_Deviation_Occured(&values[ZERO], lastButOneIndex, DeltaValue[Which_Delta_Type])) {
         return false;
     }
