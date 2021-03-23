@@ -1,4 +1,5 @@
 #include "sensor-validate.h"
+#include <iostream>
 
 #define ZERO  ((int)0)
 
