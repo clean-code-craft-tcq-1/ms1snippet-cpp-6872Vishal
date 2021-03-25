@@ -1,6 +1,7 @@
+enum DeltaTypes {Normal, SOC, Total_Deltas};
 
-bool _give_me_a_good_name(double value, double nextValue, double maxDelta);
+bool difference_of_2nd_and_1stValue_greaterthan_3rd(double value, double nextValue, double maxDelta);
 
-bool validateSOCreadings(double* values, int numOfValues);
+bool Delta_Deviation_Occured(double* values_provided, int LastValueIndex, double Delta_Used);
 
-bool validateCurrentreadings(double* values, int numOfValues);
+bool validateCurrentreadings(double* values, int numOfValues, DeltaTypes Which_Delta_Type);
