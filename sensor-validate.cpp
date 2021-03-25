@@ -23,7 +23,7 @@ bool Delta_Deviation_Occured(double* values_provided, int LastValueIndex, double
 
 bool validateCurrentreadings(double* values, int numOfValues,DeltaTypes Which_Delta_Type) {
 
-  if(values != NULL)
+  if(values != 0)
   {
     int lastButOneIndex = numOfValues - 1;
       if(Delta_Deviation_Occured(&values[ZERO], lastButOneIndex, DeltaValue[Which_Delta_Type])) {
